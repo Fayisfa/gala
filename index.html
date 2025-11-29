@@ -12,105 +12,45 @@
   <!-- Main container -->
   <div class="w-full max-w-2xl bg-white shadow-lg rounded-xl p-5 space-y-6">
 
-    <!-- Carousel Section -->
+    <!-- Single Image Section -->
     <div class="relative overflow-hidden rounded-lg shadow-md">
-      <!-- Slides wrapper -->
-      <div id="carouselSlides" class="flex transition-transform duration-500 ease-out">
-        <!-- Slide 1 -->
-        <div class="min-w-full relative">
-          <img 
-            src="./gala1.jpeg" 
-            alt="Room Image 1" 
-            class="w-full h-64 object-cover"
-          />
-          <div class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-md text-sm md:text-base">
-            Find the person
-          </div>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="min-w-full relative">
-          <img 
-            src="/./gala2.jpeg" 
-            alt="Room Image 2" 
-            class="w-full h-64 object-cover"
-          />
-          <div class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-md text-sm md:text-base">
-            Find the person
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="min-w-full relative">
-          <img 
-            src="./gala3.jpg" 
-            alt="Room Image 3" 
-            class="w-full h-64 object-cover"
-          />
-          <div class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-md text-sm md:text-base">
-            Find the person
-          </div>
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <button
-        id="prevBtn"
-        class="absolute top-1/2 -translate-y-1/2 left-2 bg-black/50 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg"
-      >
-        ‹
-      </button>
-      <button
-        id="nextBtn"
-        class="absolute top-1/2 -translate-y-1/2 right-2 bg-black/50 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg"
-      >
-        ›
-      </button>
-
-      <!-- Dots -->
-      <div class="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
-        <span class="carousel-dot w-2 h-2 rounded-full bg-white/70"></span>
-        <span class="carousel-dot w-2 h-2 rounded-full bg-white/30"></span>
-        <span class="carousel-dot w-2 h-2 rounded-full bg-white/30"></span>
+      <img
+        src="./gala1.jpeg"
+        alt="Treasure Hunt Clue Image"
+        class="w-full h-64 object-cover"
+      />
+      <div class="absolute bottom-3 left-3 bg-black/70 text-white px-3 py-1 rounded-md text-sm md:text-base">
+        Observe carefully. The answer is a *thing* in nature.
       </div>
     </div>
 
-    
+    <!-- Riddle / Question -->
+    <div class="space-y-3 text-gray-800 text-sm md:text-base">
+      <h2 class="text-lg md:text-xl font-semibold">
+        Treasure Hunt – Nature’s Secret
+      </h2>
 
-    <!-- Dates & Locations -->
-    <div class="border-t pt-4 text-gray-700 text-sm md:text-base space-y-1">
-      <p>📍 <span class="font-medium">23 Nov, 2025</span> in Kannur</p>
-      <p>📍 <span class="font-medium">16 Nov, 2025</span> in Karnataka</p>
-      <p>📍 <span class="font-medium">10 Aug, 2025</span> in Palakkad</p>
+<p class="leading-relaxed">
+  I stand in long disciplined rows,<br/>  
+  Quiet sentinels of warm and distant lands.  <br/>
+  Wanderers don’t seek my fruit or shade,  <br/>
+  Yet I’m prized for something that flows when my skin is scored.  
+  <br><br>
+
+  What leaves my wound isn’t sap as you know it —  <br/>
+  It’s a strange, resilient thread that begins as liquid <br/> 
+  And ends as something stretched, shaped, and pulled  <br/>
+  Through the hands of the world.  
+  <br><br>
+
+  Name me, and move to the next stage.
+</p>
+
+
     </div>
+
 
   </div>
-
-  <!-- Simple Carousel Script -->
-  <script>
-    const slides = document.getElementById('carouselSlides');
-    const dots = document.querySelectorAll('.carousel-dot');
-    const totalSlides = 3;
-    let currentIndex = 0;
-
-    function updateCarousel(index) {
-      slides.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-white/70', i === index);
-        dot.classList.toggle('bg-white/30', i !== index);
-      });
-    }
-
-    document.getElementById('prevBtn').addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateCarousel(currentIndex);
-    });
-
-    document.getElementById('nextBtn').addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateCarousel(currentIndex);
-    });
-  </script>
 
 </body>
 </html>
